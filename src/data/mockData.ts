@@ -1,4 +1,4 @@
-import type { LeaderboardUser, PerformanceDataPoint, SkillsDataPoint, ActivityDataPoint } from '../types';
+import type { LeaderboardUser, PerformanceDataPoint, SkillsDataPoint, ActivityDataPoint, NeuralNetworkMilestone } from '../types';
 
 export const performanceData: PerformanceDataPoint[] = [
   { name: 'Jan', score: 65, efficiency: 78 },
@@ -36,4 +36,56 @@ export const activityData: ActivityDataPoint[] = [
   { day: 'Fri', commits: 18 },
   { day: 'Sat', commits: 8 },
   { day: 'Sun', commits: 5 },
+];
+
+export const neuralNetworkTimeline: NeuralNetworkMilestone[] = [
+  {
+    id: 'perceptron',
+    name: 'Perceptron',
+    year: 1957,
+    description: 'Single-layer binary classifier that learns weights through iterative updates.',
+    position: 5,
+  },
+  {
+    id: 'rnn',
+    name: 'RNN',
+    year: 1980,
+    description: 'Recurrent connections allow networks to process sequences by maintaining hidden state.',
+    position: 20,
+  },
+  {
+    id: 'backprop',
+    name: 'Backpropagation',
+    year: 1986,
+    description: 'Algorithm for training multi-layer networks by propagating errors backward through layers.',
+    position: 30,
+  },
+  {
+    id: 'lstm',
+    name: 'LSTM',
+    year: 1997,
+    description: 'Gated memory cells selectively remember or forget information over long sequences.',
+    position: 45,
+  },
+  {
+    id: 'cnn',
+    name: 'CNN (AlexNet)',
+    year: 2012,
+    description: 'Convolutional layers extract spatial features using shared weights and pooling operations.',
+    position: 60,
+  },
+  {
+    id: 'transformer',
+    name: 'Transformer',
+    year: 2017,
+    description: 'Self-attention mechanism processes all positions in parallel without recurrence.',
+    position: 80,
+  },
+  {
+    id: 'gpt',
+    name: 'GPT',
+    year: 2018,
+    description: 'Generative pre-trained transformer uses decoder-only architecture for language modeling.',
+    position: 95,
+  },
 ];

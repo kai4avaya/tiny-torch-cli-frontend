@@ -5,9 +5,10 @@ import { LeaderboardCard } from './components/LeaderboardCard/LeaderboardCard';
 import { PerformanceChartCard } from './components/PerformanceChartCard/PerformanceChartCard';
 import { SkillsRadarCard } from './components/SkillsRadarCard/SkillsRadarCard';
 import { ActivityChartCard } from './components/ActivityChartCard/ActivityChartCard';
+import { NeuralNetworkTimelineCard } from './components/NeuralNetworkTimelineCard/NeuralNetworkTimelineCard';
 import { TerminalFooter } from './components/TerminalFooter/TerminalFooter';
 import { useBlink } from './hooks/useBlink';
-import { leaderboardData, performanceData, skillsData, activityData } from './data/mockData';
+import { leaderboardData, performanceData, skillsData, activityData, neuralNetworkTimeline } from './data/mockData';
 
 const TerminalDashboard = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -24,6 +25,11 @@ const TerminalDashboard = () => {
         <PerformanceChartCard data={performanceData} />
         <SkillsRadarCard data={skillsData} />
         <ActivityChartCard data={activityData} />
+      </div>
+
+      {/* Neural Network Timeline */}
+      <div className="mt-4">
+        <NeuralNetworkTimelineCard milestones={neuralNetworkTimeline} />
       </div>
 
       <TerminalFooter blink={blink} />
