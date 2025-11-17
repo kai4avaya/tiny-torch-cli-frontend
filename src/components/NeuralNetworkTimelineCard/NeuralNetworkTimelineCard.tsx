@@ -147,7 +147,7 @@ export const NeuralNetworkTimelineCard = ({ milestones }: NeuralNetworkTimelineC
               })}
               
               {/* Milestones */}
-              {sortedMilestones.map((milestone, index) => {
+              {sortedMilestones.map((milestone) => {
                 const isCompleted = milestone.position <= completedPosition;
                 const normalizedPosition = getNormalizedPosition(milestone.position);
                 
